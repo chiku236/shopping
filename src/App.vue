@@ -80,7 +80,7 @@ export default {
 
 body {
   margin: 0;
-  background-color: grey;
+  background-color: coral;
   padding: 10px;
 }
 i {
@@ -88,8 +88,8 @@ i {
 }
 .photo {
   width: 100%;
-  height: auto;
-  color-adjust: none;
+  height: 45%;
+  color-adjust:none;
 }
 .cost {
   color: orangered;
@@ -146,6 +146,23 @@ header .btn {
   text-decoration: lightseagreen;
   text-align: center;
 }
+.card button {
+   border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.card button:hover {
+  opacity: 0.7;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 img {
   float: center;
   width: auto;
@@ -155,11 +172,23 @@ img {
 #block_container {
   display: flex;
   justify-content: space-evenly;
+  
 }
-#bloc1 {
-  padding-left: 1cm;
+
+.glow {
+  font-size: 15px;
+  color: orange;
+  text-align: center;
+  animation: glow 0.5s ease-in-out infinite alternate;
 }
-#bloc2 {
-  align-items: center;
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px orange,0 0 20px pink;
+  }
+  
+  to {
+    text-shadow: 0 0 20px orange,0 0 20px pink;
+  }
 }
 </style>

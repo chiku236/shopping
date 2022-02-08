@@ -2,21 +2,23 @@
   <div>
     <div class="products">
       <div class="card" v-for="(product, index) in products" :key="index">
-        <h3>{{ product.name }}</h3>
-        <img class="photo" :src="product.image" />
+        <img class="photo" :src="product.image" />      
+          <h3>{{ product.name }}</h3>
+          <div class="block_container">
+          <div class="cost" id="bloc1">{{ product.cost }}</div>
+          <h4 class="glow" id="bloc2">{{product.off}}</h4>
+          </div>
         <h5>
           <a href="">{{ product.about }}</a>
         </h5>
-        <div id="block_container">
-          <div class="cost" id="bloc1">{{ product.cost }}</div>
+
+        <div class="rating" ><h4>{{ product.rating}}<i class="fas fa-star"></i></h4></div>
+          
           <button
-            class="button"
-            id="bloc2"
-            v-on:click="addItemToCart(product)"
-          >
+            class="button" v-on:click="addItemToCart(product)">
             Add to cart
           </button>
-        </div>
+        
       </div>
     </div>
   </div>
