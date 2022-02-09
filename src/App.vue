@@ -4,12 +4,14 @@
       <!-- <button v-on:click="navigateTo('products')">View products</button>
       {{cart.length}} in cart -->
       <!-- <button  v-on:click="navigateTo('cart')">View Cart</button> -->
-      <h2 v-if="$route.path === '/'">Products</h2>
+      <h2 v-if="$route.path === '/'">Product</h2>
       <h2 v-if="$route.path === '/cart'">Your Cart</h2>
       <div class="icons">
         <i class="fas fa-user-circle"></i>
         <router-link to="/cart" class="btn" @test="test">
+        
           <i class="fas fa-shopping-cart"></i>
+        
         </router-link>
       </div>
     </header>
@@ -56,9 +58,9 @@ export default {
     //   //Save
     //   console.log(this.cart);
     // },
-    // removeItemFromCart(product) {
-    //   this.cart.splice(this.cart.indexOf(product), 1);
-    // },
+    removeItemFromCart(product) {
+      this.cart.splice(this.cart.indexOf(product), 1);
+    },
     // navigateTo(page) {
     //   this.page = page;
     // },
@@ -95,6 +97,7 @@ i {
   color: orangered;
   text-decoration: cadetblue;
   grid-template-columns: 1fr 1fr;
+  margin-right: 1px;
 }
 .products {
   display: grid;
@@ -145,6 +148,8 @@ header .btn {
   box-shadow: black;
   text-decoration: lightseagreen;
   text-align: center;
+  margin-top: 5px;
+  
 }
 .card button {
    border: none;
@@ -168,6 +173,7 @@ img {
   width: auto;
   height: auto;
   object-fit: cover;
+  margin-trim: 1px;
 }
 #block_container {
   display: flex;
@@ -177,6 +183,7 @@ img {
 #bloc1, #bloc2
 {
     display:inline;
+    margin-right: 1px;
 }
 .glow {
   font-size: 15px;
@@ -184,6 +191,7 @@ img {
   text-align: center;
   animation: glow 0.5s ease-in-out infinite alternate;
 }
+
 
 @-webkit-keyframes glow {
   from {

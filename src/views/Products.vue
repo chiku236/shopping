@@ -18,6 +18,7 @@
             class="button" v-on:click="addItemToCart(product)">
             Add to cart
           </button>
+          
         
       </div>
     </div>

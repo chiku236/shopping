@@ -1,22 +1,21 @@
 <template>
   <div>
     <div class="products">
-      <div class="card" v-for="(product, index) in cart" :key="index">
-        <h3>{{ product.name }}</h3>
+      <div class="" v-for="(product, index) in cart" :key="index">
+        <h2>{{ product.name }}</h2>
         <img :src="product.image" />
         <div>{{ product.cost }}</div>
-        <p>Count: {{ product.count }}</p>
-        <!-- <button v-on:click="removeItemFromCart(product)">Remove from cart</button> -->
-        <button class="increment-item">+</button>
-        <button class="decrement-item">-</button>
+        <p>count: {{ product.count }}</p>
+         <button v-on:click="removeItem(product.id)">Remove</button> 
+        
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import store from "../store";
-//  Try the increment and decrement on your own!
+import store, {mutations} from "../store";
+
 export default {
   name: "Cart",
   data() {
@@ -25,6 +24,7 @@ export default {
   },
   methods: {
     removeItemFromCart(product) {},
+    removeItem: mutations.removeItem
   },
   computed: {
     cart() {

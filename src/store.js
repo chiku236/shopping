@@ -30,6 +30,9 @@ export const mutations = {
             if (store.cart[isProductInCart].count > 1) store.cart[isProductInCart].count--
             else store.cart.splice(isProductInCart, 1)
         }
+    },
+    removeItem(id){
+        store.cart = store.cart.filter(product => product.id !== id);
     }
 }
 export default store;
