@@ -171,24 +171,27 @@ img {
 }
 #block_container {
   display: flex;
-  justify-content: space-evenly;
+  
   
 }
-
+#bloc1, #bloc2
+{
+    display:inline;
+}
 .glow {
   font-size: 15px;
-  color: orange;
+  color:red;
   text-align: center;
   animation: glow 0.5s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px orange,0 0 20px pink;
+    text-shadow: 0 0 10px orangered,0 0 20px red;
   }
   
   to {
-    text-shadow: 0 0 20px orange,0 0 20px pink;
+    text-shadow: 0 0 20px orangered,0 0 20px red;
   }
 }
 </style>
